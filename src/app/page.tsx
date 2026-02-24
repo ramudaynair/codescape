@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero';
 import ClientLogos from '@/components/sections/ClientLogos';
+import QuickLinks from '@/components/sections/QuickLinks';
 import ServicesPreview from '@/components/sections/ServicesPreview';
 import Testimonials from '@/components/sections/Testimonials';
 import MidCTA from '@/components/sections/MidCTA';
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <ClientLogos />
+      <QuickLinks />
       <ServicesPreview />
       <Testimonials />
       <MidCTA />

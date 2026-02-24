@@ -1,12 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const links = [
     { href: '/services', label: 'Services' },
@@ -36,7 +41,7 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      initial={{ y: -100, opacity: 0 }}
+      initial={false}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50"
@@ -64,8 +69,8 @@ export default function Navbar() {
               {links.map((link, index) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={false}
+                  animate={mounted ? { opacity: 1, y: 0 } : false}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <Link

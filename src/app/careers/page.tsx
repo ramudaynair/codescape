@@ -70,9 +70,21 @@ export default function CareersPage() {
           }}
         >
           {[
-            { emoji: '🚀', title: 'Innovation First', desc: 'We encourage experimentation and embrace new technologies.' },
-            { emoji: '🤝', title: 'Collaborative', desc: 'Great ideas come from diverse perspectives working together.' },
-            { emoji: '🌱', title: 'Growth Focused', desc: 'Continuous learning and professional development are core values.' },
+            { 
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+              title: 'Innovation First', 
+              desc: 'We encourage experimentation and embrace new technologies.' 
+            },
+            { 
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>,
+              title: 'Collaborative', 
+              desc: 'Great ideas come from diverse perspectives working together.' 
+            },
+            { 
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>,
+              title: 'Growth Focused', 
+              desc: 'Continuous learning and professional development are core values.' 
+            },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -83,8 +95,12 @@ export default function CareersPage() {
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="p-8 text-center h-full">
-                <div className="text-4xl mb-4">{item.emoji}</div>
+              <Card className="p-8 text-center h-full group">
+                <div 
+                  className="text-[#0F172A] group-hover:text-[#2A9AD6] group-hover:scale-110 transition-all duration-200 mb-4 flex justify-center"
+                >
+                  {item.icon}
+                </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0F172A] tracking-tight">{item.title}</h3>
                 <p className="text-[#374151] leading-relaxed">{item.desc}</p>
               </Card>
