@@ -103,12 +103,6 @@ codescp/
 
 This project was created for the Capeathon hackathon.
 
-## 🙏 Acknowledgments
-
-- CODESCAPE for the opportunity and design inspiration
-- IEDC MACE for organizing the hackathon
-- All mentors and organizers who supported the event
-
 ---
 
 **Built with ❤️ during Capeathon by CODESCAPE x IEDC MACE**
