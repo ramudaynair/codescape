@@ -56,7 +56,7 @@ export default function Hero() {
             <div className="w-2 h-2 bg-sky-500 rounded-full" />
             <span className="text-xs font-bold text-[#0F172A] dark:text-white uppercase tracking-wider">CODESCAPE</span>
             <div className="ml-1 text-[#0F172A] dark:text-white">
-              {theme === 'light' ? (
+              {theme === 'dark' ? (
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
@@ -100,7 +100,7 @@ export default function Hero() {
           />
           <span className="text-xs font-bold text-[#0F172A] dark:text-white uppercase tracking-wider">CODESCAPE</span>
           <div className="ml-1 text-[#0F172A] dark:text-white">
-            {theme === 'light' ? (
+            {theme === 'dark' ? (
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
