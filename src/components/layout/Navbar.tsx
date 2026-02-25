@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +46,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-50"
     >
-      <div className="glass shadow-lg dark:bg-slate-800/70 dark:border-slate-700/30">
+      <div className="glass shadow-lg dark:bg-slate-800/70 dark:border-slate-700/30 dark:shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center h-16">
             <motion.div
@@ -88,33 +87,29 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <ThemeToggle />
             </div>
 
-            <div className="md:hidden flex items-center gap-2">
-              <ThemeToggle />
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-lg text-[#374151] dark:text-slate-200 hover:bg-white/40 dark:hover:bg-slate-700/40"
-                onClick={() => setIsOpen(!isOpen)}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="md:hidden p-2 rounded-lg text-[#374151] dark:text-slate-200 hover:bg-white/40 dark:hover:bg-slate-700/40"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <motion.svg 
+                className="w-6 h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+                animate={{ rotate: isOpen ? 90 : 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <motion.svg 
-                  className="w-6 h-6" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  animate={{ rotate: isOpen ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {isOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </motion.svg>
-              </motion.button>
-            </div>
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </motion.svg>
+            </motion.button>
           </div>
         </div>
 
