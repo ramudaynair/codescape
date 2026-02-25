@@ -40,6 +40,7 @@ export default function ContactPage() {
                     id="name"
                     className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white focus:ring-2 focus:ring-[#2A9AD6] focus:border-transparent outline-none transition-all"
                     placeholder="Your name"
+                    suppressHydrationWarning
                   />
                 </motion.div>
                 <motion.div whileFocus={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
@@ -51,6 +52,7 @@ export default function ContactPage() {
                     id="email"
                     className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white focus:ring-2 focus:ring-[#2A9AD6] focus:border-transparent outline-none transition-all"
                     placeholder="your@email.com"
+                    suppressHydrationWarning
                   />
                 </motion.div>
               </div>
@@ -64,6 +66,7 @@ export default function ContactPage() {
                   id="company"
                   className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white focus:ring-2 focus:ring-[#2A9AD6] focus:border-transparent outline-none transition-all"
                   placeholder="Your company"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -76,6 +79,7 @@ export default function ContactPage() {
                   id="subject"
                   className="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] bg-white focus:ring-2 focus:ring-[#2A9AD6] focus:border-transparent outline-none transition-all"
                   placeholder="How can we help?"
+                  suppressHydrationWarning
                 />
               </div>
 

@@ -43,6 +43,7 @@ export default function Button({
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      suppressHydrationWarning
       {...(props as any)}
     >
       <span className="relative z-10">{children}</span>

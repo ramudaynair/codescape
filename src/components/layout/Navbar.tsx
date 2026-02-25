@@ -59,7 +59,7 @@ export default function Navbar() {
                   alt="CODESCAPE Logo" 
                   width={140} 
                   height={40}
-                  className="h-10 w-auto"
+                  className="h-auto w-[140px]"
                   priority
                 />
               </Link>
