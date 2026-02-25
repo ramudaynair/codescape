@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Aurora from '@/components/ui/Aurora';
+import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Navbar />
         <main className="relative z-10">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
